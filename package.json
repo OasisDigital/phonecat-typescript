@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "phonecat-typescript",
+  "description": "A TypeScript conversion of Google's angular-phonecat library",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "~0.1.0",
+    "protractor": "^2.1.0",
+    "http-server": "^0.8.0",
+    "bower": "^1.5.2",
+    "tsd": "^0.6.4",
+    "typescript": "^1.5.4"
+  },
+  "scripts": {
+    "postinstall": "bower install && tsd install && npm run tsc",
+
+    "tsc": "tsc -p app -out app/all.js",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000",
+
+    "pretest": "npm install",
+    "test": "karma start test/karma.conf.js",
+    "test-single-run": "karma start test/karma.conf.js  --single-run",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js"
+  }
+}
