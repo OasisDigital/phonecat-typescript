@@ -48,6 +48,6 @@ Requires a webserver that serves the application. See Running the app during dev
   configuration at `test/protractor-conf.js`.  
   
 [protractor]: https://github.com/angular/protractor
-[jasmine]: http://pivotal.github.com/jasmine/
+[jasmine]: https://jasmine.github.io/
 [karma]: http://karma-runner.github.io
   
